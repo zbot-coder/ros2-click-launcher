@@ -30,6 +30,6 @@ It automatically opens a new terminal, **sources the workspace**, and executes t
 🔹 Detecting workspace automatically  
 
 ## Issues & Contributions
-If you encounter any issues, feel free to open an **issue** or contribute on [GitHub](https://github.com/zbot-coder/ros2-launcher-vscode).
+If you encounter any issues, feel free to open an **issue** or contribute on [GitHub](https://github.com/zbot-coder/ros2-click-launcher).
 
 ---
