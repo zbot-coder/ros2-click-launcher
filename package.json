@@ -3,7 +3,7 @@
   "displayName": "ROS2 Click Launcher",
   "description": "Right click on ROS2 launch files to run them directly from VS Code",
   "publisher": "zodiac-robotics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.97.0"
   },

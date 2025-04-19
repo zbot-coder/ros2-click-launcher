@@ -28,8 +28,22 @@ function runROS2LaunchFile(filePath: string) {
 function getPackageName(filePath: string): string | null {
     const pathParts = filePath.split("/");
     const srcIndex = pathParts.indexOf("src");
-    if (srcIndex !== -1 && srcIndex + 1 < pathParts.length) {
-        return pathParts[srcIndex + 1];
+    if (srcIndex === -1) {
+        return null;
+    }
+
+    // Start from the src directory and look for the package directory
+    for (let i = srcIndex + 1; i < pathParts.length; i++) {
+        const currentPath = pathParts.slice(0, i + 1).join("/");
+        try {
+            // Check if this directory contains a package.xml file
+            const fs = require('fs');
+            if (fs.existsSync(`${currentPath}/package.xml`)) {
+                return pathParts[i];
+            }
+        } catch (error) {
+            continue;
+        }
     }
     return null;
 }
